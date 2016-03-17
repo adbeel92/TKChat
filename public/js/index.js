@@ -1,6 +1,6 @@
 function init() {
 
-  var serverBaseUrl = document.domain + ":5000";
+  var serverBaseUrl = "";
 
   /* 
     On client init, try to connect to the socket.IO server.
