@@ -34,7 +34,7 @@ var participants = [];
 
 app.set("host", (process.env.HOST || "127.0.0.1"));
 
-app.set('port', (process.env.PORT || 8080));
+app.set('port', (process.env.PORT || 5000));
 
 app.set('views', __dirname + '/views');
 
