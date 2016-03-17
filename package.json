@@ -8,20 +8,22 @@
     "start": "node index.js"
   },
   "dependencies": {
-    "ejs": "2.3.3",
-    "express": "4.13.3"
-  },
-  "engines": {
-    "node": "0.12.7"
+    "express": "4.13.4",
+    "socket.io": "1.4.5",
+    "jade": "1.11.0",
+    "underscore": "1.8.3",
+    "body-parser": "1.15.0"
   },
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://adbeel92@bitbucket.org/yours-backend/yours-nodejs.git"
   },
   "keywords": [
     "node",
     "heroku",
-    "express"
+    "express",
+    "socket.io"
   ],
-  "license": "Yours"
+  "license": "Yours",
+  "author": "Eduardo Adbeel Arenas Albarracin"
 }
