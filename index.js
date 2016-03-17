@@ -32,9 +32,9 @@ var express = require("express")
 */
 var participants = [];
 
-app.set("ipaddr", "127.0.0.1");
+app.set("host", (process.env.HOST || "127.0.0.1"));
 
-app.set('port', (process.env.PORT || 5000));
+app.set('port', (process.env.PORT || 8080));
 
 app.set('views', __dirname + '/views');
 
@@ -118,6 +118,6 @@ io.on("connection", function(socket){
 });
 
 
-http.listen(app.get("port"), app.get("ipaddr"), function() {
-  console.log("Server up and running. Go to http://" + app.get("ipaddr") + ":" + app.get("port"));
+http.listen(app.get("port"), app.get("host"), function() {
+  console.log("Server up and running. Go to http://" + app.get("host") + ":" + app.get("port"));
 });
