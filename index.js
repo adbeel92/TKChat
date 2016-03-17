@@ -118,6 +118,6 @@ io.on("connection", function(socket){
 });
 
 
-http.listen(app.get("port"), app.get("host"), function() {
-  console.log("Server up and running. Go to http://" + app.get("host") + ":" + app.get("port"));
+app.listen(app.get("port"), function() {
+  console.log("Server up and running. Go to http://HOST:" + app.get("port"));
 });
