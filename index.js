@@ -98,7 +98,7 @@ io.on("connection", function(socket){
   */
   socket.on("nameChange", function(data) {
     try {
-      _.findWhere(participants, {id: data.id}).name = data.name;
+      _.findWhere(participants, {id: socket.client.id}).name = data.name;
       io.sockets.emit("nameChanged", {id: data.id, name: data.name});
     } catch (error) {
       console.log("Error while name was changing");
@@ -111,8 +111,8 @@ io.on("connection", function(socket){
     all participants with the id of the client that disconnected
   */
   socket.on("disconnect", function() {
-    participants = _.without(participants,_.findWhere(participants, { id: socket.id }));
-    io.sockets.emit("userDisconnected", { id: socket.id, sender: "system" });
+    participants = _.without(participants,_.findWhere(participants, { id: socket.client.id }));
+    io.sockets.emit("userDisconnected", { id: socket.client.id, sender: "system" });
   });
 
 });
