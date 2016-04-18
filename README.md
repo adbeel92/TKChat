@@ -1,4 +1,4 @@
-# YOURS NodeJS
+# TKChat NodeJS
 
 This app uses [Express 4](http://expressjs.com/).
 
